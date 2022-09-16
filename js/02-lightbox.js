@@ -13,16 +13,7 @@ const markup = galleryItems.map(item =>
 ).join('');
 galeryEl.innerHTML = `${markup}`;
 
-galeryEl.addEventListener('click', onGalleryClick);
-
-function onGalleryClick(event) {
-    event.preventDefault(event);
-    if (!event.target.classList.contains('gallery__image')) {
-        return;
-    } else {
-       const lightbox = new SimpleLightbox('.gallery a', {captionsData: 'alt', captionPosition: 'bottom', captionDelay: 250});
-    }
-}
-
+ const lightbox = new SimpleLightbox('.gallery a', {captionsData: 'alt', captionPosition: 'bottom', captionDelay: 250});
+    
 console.log(galleryItems);
 
